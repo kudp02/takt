@@ -1,0 +1,16 @@
+.service {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    padding:10px 0;
+    color:black;
+    border-bottom: 1px solid black;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.arrow {
+    text-align: right;
+}

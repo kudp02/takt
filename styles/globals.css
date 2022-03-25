@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Suisse";
+  src: url(../assets/Suisse/SuisseIntl-Book-WebM.woff);
+  src: url(../assets/Suisse/SuisseIntl-Book-WebM.woff2);
+  src: url(../assets/Suisse/SuisseIntl-Book-WebM.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --main-color: #EE534C;
+}
+
+* {
+  font-family: "Suisse", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4 {
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 10vw;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 6vw;
+  margin: 0;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  gap:50px
+}
+
+
+@media screen and (max-width:766px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

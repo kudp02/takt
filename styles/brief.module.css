@@ -1,0 +1,142 @@
+.bigHeading {
+  color: var(--main-color);
+}
+
+.congrats {
+    text-align: center;
+    margin: 100px 0;
+    font-size: 10vw;
+}
+
+.form {
+  margin-top: 100px;
+}
+
+.section {
+  margin: 100px 0;
+}
+
+.heading {
+  font-size: 3vw;
+  margin-bottom: 20px;
+}
+
+.checkboxes {
+  display: flex;
+  align-items: flex-end;
+  height: 30px;
+}
+
+.checkboxes div {
+  display: inline-block;
+  margin: 0 20px;
+  margin: 0px 20px 0px 0px;
+  border-radius: 100px 100px 100px 100px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkboxes label {
+  cursor: pointer;
+}
+
+.checkboxes input {
+  display: none;
+}
+
+.checkboxes input:checked + label {
+  font-size: 32px;
+  color: var(--main-color);
+}
+
+.textarea {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #a7a7a7;
+  resize: none;
+  width: 100%;
+  font-size: 16px;
+  height: 33px;
+}
+
+.textarea:focus {
+  border-color: var(--main-color);
+}
+
+.input {
+  position: relative;
+  margin-top: 20px;
+}
+
+.label {
+  position: absolute;
+  top: 0px;
+  transition: 0.3s;
+  pointer-events: none;
+  font-size: 16px;
+  color: #a7a7a7;
+  transform-origin: 0 0;
+  vertical-align: baseline;
+}
+
+.input:focus-within label,
+.valid {
+  transform: translateY(-17px) scale(0.7);
+}
+
+.contacts .input {
+  margin-bottom: 10px;
+}
+
+.button {
+  color: var(--main-color);
+  box-shadow: none;
+  font-size: 10vw;
+  border: none;
+  cursor: pointer;
+  /* padding: 5px 20px; */
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+}
+
+.dropzone {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2;
+  border-radius: 2;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 766px) {
+  .heading {
+    font-size: 7vw;
+  }
+
+  .checkboxes {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    height: auto;
+  }
+
+  .contacts > div {
+    gap: 0 ;
+  }
+
+  .dropzone {
+    width: 100%;
+  }
+}

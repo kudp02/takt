@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.menuItem {
+  display: inline-block;
+  padding: 0 0.3em;
+  font-size: 40px;
+  position: relative !important;
+  color: transparent !important;
+  cursor: pointer !important;
+  line-height: 1.2em !important;
+}
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: black;
+  top: 0;
+  height: 26px;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  font-size: 40px;
+}
+
+.Mask span {
+  display: block;
+}
+
+.Mask + .Mask {
+  display: block;
+  top: 26px;
+  height: 35px;
+}
+
+.Mask + .Mask span {
+  transform: translateY(-54%);
+}
+
+.menuItem:hover .Mask,
+.menuItem:active .Mask {
+  transform: translateX(-1px);
+}
+
+.menuItem:hover .Mask + .Mask,
+.menuItem:active .Mask + .Mask {
+  transform: translateX(1px);
+}
+
+.brief .Mask {
+  color: var(--main-color);
+}
+
+@media screen and (max-width: 766px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .menuItem,
+  .Mask {
+    font-size: 21px;
+  }
+
+  .Mask {
+    height: 14px;
+  }
+  .Mask + .Mask {
+    top: 14px;
+  }
+
+  .Mask + .Mask span {
+    transform: translateY(-55%);
+  }
+
+  .menuItem:hover .Mask,
+  .menuItem:active .Mask {
+    transform: translateX(-.5px);
+  }
+
+  .menuItem:hover .Mask + .Mask,
+  .menuItem:active .Mask + .Mask {
+    transform: translateX(.5px);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .Mask {
+    height: 41%;
+  }
+  .Mask + .Mask {
+    top: 41%;
+  }
+}

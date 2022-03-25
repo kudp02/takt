@@ -1,0 +1,14 @@
+.short {
+    margin-left: 40%;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.items {
+    margin-bottom: 100px;
+}
+
+.item {
+    padding:20px 0;
+    border-bottom: 1px solid black;
+}

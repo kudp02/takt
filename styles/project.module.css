@@ -1,0 +1,97 @@
+.section {
+    margin:200px 0;
+}
+
+.section div {
+    white-space: pre-line;
+}
+
+.projectInfo {
+    width:50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: auto;
+    justify-items: space-between;
+    gap:40px
+}
+
+
+
+.projectInfoCol, .projectInfoCol div {
+    font-size: 16px;
+}
+
+.projectInfoCol .heading, .heading {
+    color: #767676;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about {
+    position: relative;
+    margin:100px 0;
+}
+
+.about .heading {
+    position: absolute;
+    top:8px
+}
+
+.aboutText {
+    font-size: 51px;
+    text-indent: 16.25vw;
+    max-width: 50%;
+}
+
+.bigHeading {
+    font-size: 36px;
+    min-width: 50%;
+    line-height: 38px;
+    color: #767676;
+    padding-right: 10%;
+}
+
+.imageCont video {
+    width: 100%;
+}
+
+.section .row {
+    font-size: 16px;
+}
+
+.galleryCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.galleryCont .col {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.galleryCont img {
+    width: 100%;
+}
+
+@media screen and (max-width: 766px) {
+    .section {
+        margin:100px 0;
+    }
+
+    .projectInfo {
+        width:100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .aboutText {
+        font-size: 31px;
+        text-indent: 30.25vw;
+        max-width: 100%;
+    }
+
+    .galleryCont {
+        grid-template-columns: 1fr;
+    }
+}

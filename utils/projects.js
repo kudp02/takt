@@ -1,0 +1,223 @@
+export const projects = [
+    {
+        name: "Alta",
+        id: "alta",
+        time: "2 měsíce",
+        type: ["Webový design", "Vývoj", "Google Ads"],
+        made: ["design", "dev", "ppc", "seo"],
+        url:"alta.cz",
+        about:"Stylový butik sídlící v Karlových Varech",
+        image:"https://takt.digital/wp-content/uploads/2022/01/Снимок-экрана-2022-01-29-в-17.51.43.webp",
+        video1:"",
+        video2:"",
+        title1:"Design",
+        desc1:`Alta je multiznačkový butik s francouzským krajkovým prádlem a stylovým značkovým oblečením.
+        V designu loga byl použit serif Garamond, doprovázený PP Pangram Sans. Moderní groteska, která naopak působí ultramoderně. Tento kontrast je ideální pro filozofii Alty. Tradice a styl.
+        
+        Většina stránek je monochromatická, ale na stránkách značky a přihlašovacích stránkách jsme vyplnili místa radiálními přechody.`,
+        gallery1: ["https://takt.digital/wp-content/uploads/2021/07/kosil-alta.jpg", "https://takt.digital/wp-content/uploads/2021/07/brand.jpg"],
+        title2:"Rozvoj elektronického obchodování",
+        desc2:`Předchozí web byl postaven na platformě českého e-commerce. Bylo na něm přes 250 produktů, a platforma neumožňovala nic exportovat. Přesto jsme našli řešení. Pro produkty Google jsme importovali metadata produktů prostřednictvím zdroje XML. To ušetřilo týdny vývoje.
+
+        Vyvinuli jsme:
+        Rychlý filtr na stránkách obchodu připnutý nahoře
+        Pohodlné přidávání variabilních produktů (několik barev a velikostí)
+        Rozměrové mřížky přizpůsobitelné pro každou kategorii
+        Pokladna bez rozptylování
+        Rychlé vyhledávání Ajax podle produktů a kategorií
+        Přidání značky produktu
+        Seznam přání
+        
+        Propojili jsme online pokladnu GP WebPay, rozvoz Zásilkovny a fakturační systém Fakturoid.`,
+        title3:"Rychlost, optimalizace a UX",
+        desc3:`Několik vylepšení, které jsme provedli pro pohodlný zážitek z elektronického obchodování:
+        Pokud má produkt více barev, je každý produkt zobrazen samostatně.
+        Když uživatel změní barvu, galerie produktů se okamžitě změní, bez nutnosti výběru velikosti.
+        Fotografie produktů ve vysokém rozlišení se načtou po načtení hlavní stránky.
+        
+        Tímto způsobem jsme dosáhli optimální rychlosti stránky <1 sekunda.`,
+    },
+    {
+        name: "Bak Development",
+        id: "bak",
+        time: "1 měsíc",
+        type: ["Web design", "Development"],
+        made: ["design", "dev"],
+        url:"https://bakdevelopment.cz/",
+        about:"Moderní developerská společnost",
+        image:"https://takt.digital/wp-content/uploads/2022/01/Bak-1.png",
+        video1:"",
+        video2:"",
+        title1:"Synchronizace tabulek Google",
+        desc1:`Klienti chtěli používat google tabulky jako primární zdroj dat, tak aby web automaticky synchronizoval ceny a další metadata. Vytvořili jsme vlastní typ příspěvku a kategorii pro snadné přidávání nových bytů a projektů. Na serveru webových stránek je uložena nějaká statická metadata, aby nevznikaly zbytečné požadavky na Google a optimalizovala se rychlost načítání stránky.`,
+        gallery1: ["", ""],
+        title2:"Dynamické generování PDF",
+        desc2:`Soubory PDF také používají některá data z tabulek Google k dynamickému generování dokumentu. Takže když je přidán nový byt, PDF se automaticky vygeneruje na tlačítku stažení. Vytvořili jsme jednu univerzální šablonu, která dobře funguje s různým počtem místností a obrázků. To výrazně usnadňuje aktualizaci a údržbu webových stránek, zvláště když máte mnoho bytů a potřebujete rychle změnit cenu u všech vyladěním pouze jednoho parametru v tabulce Google.`,
+        title3:"Hypoteční kalkulačka",
+        desc3:"Pod hlavními informacemi o každém bytu jsme vytvořili praktickou hypoteční kalkulačku, která také zobrazuje cenu bytu a počítá průměrnou měsíční výši splátky.",
+    },
+    {
+        name: "Cheeky",
+        id: "cheeky",
+        time: "2 týdny",
+        type: ["Web design"],
+        made: ["design"],
+        url:"",
+        about:"Koncept pro vynikající belgickou čokoládu",
+        image:"https://takt.digital/wp-content/uploads/2022/01/Снимок-экрана-2022-01-29-в-17.53.36.webp",
+        video1:"",
+        video2:"",
+        title1:"",
+        desc1:"",
+        gallery1: ["https://takt.digital/wp-content/uploads/2021/12/Desktop-7-scaled.jpg", "https://takt.digital/wp-content/uploads/2021/12/Desktop-11.jpg"],
+        title2:"",
+        desc2:"",
+        title3:"",
+        desc3:"",
+    },
+    {
+        name: "House of Hedonism",
+        id: "house-of-hedonism",
+        time: "8 týdnů",
+        type: ["Web design", "Vývoj", "Photo & Video"],
+        made: ["design", "dev"],
+        url:"http://houseofhedonism.ru/",
+        about:"Autentické cestování.",
+        image:"https://takt.digital/wp-content/uploads/2020/11/hog1.webp",
+        video1:"/videos/hog44.mp4",
+        video2:"",
+        title1:"Proces",
+        desc1:`Název tohoto projektu mluví sám za sebe. Zrodil se proto, aby dal lidem nové emoce, nové zážitky a hlavně se načerpal při cestě v aparthotelu. Klient se od začátku rozhodl, že by to měl být špičkově vypadající web. Se zcela novými možnostmi animací, překryvné nabídky a tak dále.`,
+        gallery1: ["https://takt.digital/wp-content/uploads/2020/03/Main-toscana-e1571659568579.jpg", "https://takt.digital/wp-content/uploads/2020/03/IMGP8844-main.jpg", "https://takt.digital/wp-content/uploads/2020/03/A8B1576-e1577545155893.jpg", "https://takt.digital/wp-content/uploads/2020/03/slider.jpg"],
+        title2:"Fotky",
+        desc2:`Tento projekt silně spoléhá na obsah fotografií. Nechtěli jsme záměrně používat ikony nebo jiné grafické prvky. Měla by to být přirozená krása všeho, co vás na prohlídce může potkat. Obrovské díky Pavlovi, který nám umožnil využít všechny krásné krajiny.
+
+        Provedli jsme také hluboký průzkum po všech fotobankách, abych našel skutečné skvosty mezi nudnými obrázky.`,
+        title3:"Video",
+        desc3:`Měli jsme také možnost natočit krásný krátký film, turné po Toskánsku. Video se zde brzy objeví.`,
+    },
+    {
+        name: "Film",
+        id: "film",
+        time: "1 týden",
+        type: ["Design", "Vývoj", "Identita"],
+        made: ["design", "dev"],
+        url:"https://film.kudryavtsev.cz/",
+        about:"Osobní web pro video produkci",
+        image:"https://takt.digital/wp-content/uploads/2020/09/FIKU-scaled.jpg",
+        video1:"/videos/filmK.mp4",
+        video2:"",
+        title1:"Pojem",
+        desc1:`V tomto osobním projektu jsme silně spoléhali na gridový systém, koncept, animaci a typografii. Chtěli jsme dosáhnout moderního vzhledu bez použití zbytečných prvků a udělat experimentární, více než SEO, friendly web.
+        Hlavní myšlenkou je menu, které přechází od rozostření k ostrému přiblížení. Snažili jsme se napodobit efekt, jaký má kameraman při zaostřování objektivu.`,
+        gallery1: ["", ""],
+        title2:"",
+        desc2:"",
+        title3:"",
+        desc3:"",
+    },
+    {
+        name: "Trindadent",
+        id: "trindadent",
+        time: "",
+        type: ["Web design", "Vývoj", "Google Ads"],
+        made: ["design", "dev", "ppc"],
+        url:"",
+        about:"Koncept pro pražského zubaře",
+        image:"https://takt.digital/wp-content/uploads/2022/01/trindadent1.webp",
+        video1:"",
+        video2:"",
+        title1:"",
+        desc1:"",
+        gallery1: ["https://takt.digital/wp-content/uploads/2021/12/Frame-51.jpg", "https://takt.digital/wp-content/uploads/2021/12/Frame-50-1.jpg", "https://takt.digital/wp-content/uploads/2021/12/Contacts-scaled.jpg", "https://takt.digital/wp-content/uploads/2021/12/Frame-40.jpg"],
+        title2:"",
+        desc2:"",
+        title3:"",
+        desc3:"",
+    },
+    {
+        name: "Bohemia Twist",
+        id: "bohemia-twist",
+        time: "",
+        type: ["Web design", "Vývoj", "Google Ads"],
+        made: ["design", "dev", "ppc"],
+        url:"",
+        about:"Jednoduchý, ale funkční web pro překlady z angličtiny do češtiny",
+        image:"https://takt.digital/wp-content/uploads/2022/01/bohemiaTwist1.webp",
+        video1:"/videos/bohemia-twist.mp4",
+        video2:"",
+        title1:"Řešení problému",
+        desc1:`Návrh rozvržení zaměřený na SEO s dostatkem textu, obrázků a interaktivity. Hlavní funkcí jsou dvě formy:
+        Formulář pro zpětné volání s automatickým formátováním čísel a čistý formulář žádosti s možností připojení souborů pro rychlý start.`,
+        gallery1: ["", ""],
+        title2:"",
+        desc2:"",
+        title3:"",
+        desc3:"",
+    },
+    {
+        name: "Vaspodolog",
+        id: "vaspodolog",
+        time: "2 měsíce",
+        type: ["Návrh", "Vývoj"],
+        made: ["design", "dev"],
+        url:"https://vaspodolog.cz/",
+        about:"Komplexní e-shop pro udržení zdravých nehtů",
+        image:"https://takt.digital/wp-content/uploads/2022/01/vaspodolog2-1024x554-1.webp",
+        video1:"",
+        video2:"",
+        title1:"Redesign",
+        desc1:"Když jsme převzali tento web, měl několik problémů s designem a funkčností. Držíme se stávajícího loga a převzali jsme z něj barvu zvýraznění a písmo nadpisu. Byl to ale jen začátek. Pak jsme se rozhodli jít s bílým pozadím a fotkami z ateliéru. Klienti by se tak cítili bezpečně a pravděpodobně by pro ně bylo jednodušší rezervovat si schůzku nebo nakupovat produkty.",
+        gallery1: ["", ""],
+        title2:"E-shop a výuková platforma",
+        desc2:`E-shop zde má dvě hlavní kategorie – kurzy a produkty. Začněme tedy produkty.
+
+        Světlana má speciální produkty a slevy dostupné pouze pro profesionály s DIČ. Pokud o něj chce klient požádat, musí se zaregistrovat a počkat na schválení. Světlana může jedním kliknutím z e-mailu rychle zkontrolovat všechny potřebné informace a poté schválit nového uživatele PRO. Nyní může uživatel PRO přidávat speciální produkty do košíku a mít zvýhodněné ceny na vybrané produkty. Navíc je zde speciální PRO sekce a kurzy, které lze nyní vkládat do košíku. Pojďme se na kurzy podívat hlouběji.
+        
+        Světlana má dva typy kurzů – online a aktuální formu. Pro každý z těchto typů se při placení zobrazují různé platební metody a používají se jedinečné e-maily a stránky s poděkováním. Každý kurz má vlastní časovou platnost, takže přístup ke kurzu se po uplynutí určitých dnů automaticky zruší. Také jsme přestavěli admin panel pro snadnější přístup ke kurzům.`,
+        title3:"E-maily",
+        desc3:`Existuje mnoho různých e-mailů, které se zasílají zákazníkům a správcům. Nemluvě o základních e-mailech po zakoupení nebo ztraceném heslu, je zde několik zajímavých věcí. Například, když zákazník požádá o uživatelský účet PRO, obdrží e-mail s potvrzením jeho požadavku. Po schválení obdrží další uvítací e-mail s odkazem na sekci PRO. Dalším příkladem může být připomenutí, že přístup do kurzu bude brzy zrušen.
+
+        Vytvořili jsme jednoduchou HTML šablonu pro každý e-mail a ujistil se, že funguje perfektně s tmavým režimem na všech oblíbených e-mailových klientech.`,
+    },
+    {
+        name: "Jack Bright",
+        id: "jack-bright",
+        time: "1 měsíc",
+        type: ["Design", "Development"],
+        made: ["design", "dev"],
+        url:"http://jackbright.cz/",
+        about:"Jednoduchý moderní web pro anglického copywritera a překladatele",
+        image:"https://takt.digital/wp-content/uploads/2022/01/jack.webp",
+        video1:"/videos/JB-11.mp4",
+        video2:"/videos/JB2.mp4",
+        title1:"Idea",
+        desc1:"Na hlavní stránce uživatel vidí všechny služby a může odhadnout přibližnou cenu. Každá kalkulačka pro každou službu funguje zcela odlišně. Poté, co uživatel uvidí cenu, může Jacka kontaktovat pomocí tlačítka poblíž.",
+        gallery1: ["", ""],
+        title2:"Blog",
+        desc2:"Jedním z hlavních cílů bylo vytvořit jednoduchý blog, který se bude lišit od všech ostatních. Nejprve jsme vytvořili gridový systém, který jsme se následně rozhodli použít na celém webu. Levá část je záhlaví a ozdobné prvky, pravá je obsah. V článku může uživatel najet na neznámá zvýrazněná slova a objeví se speciální nápověda. Dalším cílem bylo co nejvíce usnadnit proces přidávání nových příspěvků pro Jacka. Jack může nahrát až 6 obrázků a ty budou vždy rovnoměrně zarovnány bez ohledu na to, kolik je textu.",
+        title3:"",
+        desc3:"",
+    },
+    {
+        name: "WellFed",
+        id: "wellfed",
+        time: "6 týdnů",
+        type: ["Design", "Web Development", "Mail Design", "Newsletter"],
+        made: ["design", "dev"],
+        url:"",
+        about:"Co nejjednodušší výživový koučink.",
+        image:"https://takt.digital/wp-content/uploads/2020/01/wellfed-e1638721564816.jpg",
+        video1:"/videos/wellfed-2.mp4",
+        video2:"",
+        title1:"Proces",
+        desc1:`Účelem této webové stránky je poskytnout lidem informace o výživovém koučování. Je to vedlejší projekt jednoho z majitelů nejlepšího CrossFit klubu v Praze – MeatFactory. Úkol byl komplexní – vybudovat platformu s elektronickým obchodem, osobní oblastí s dokumenty, moderními průzkumy a dokonce i vestavěným chatem (který byl později upgradován na služby Google).
+
+        V tomto projektu jsme měli spoustu svobody experimentovat.`,
+        gallery1: ["", ""],
+        title2:"Styl",
+        desc2:"Chtěli jsme, aby to bylo čisté a vtipné, jednoduché a lehké. Našli jsme dokonalé kreslené ilustrace: banán s činkou, avokádo se svaly a tak dále. To byl pro začátek výchozí bod.",
+        title3:"Osobní oblast",
+        desc3:"Největší výzvou bylo vytvořit funkční osobní prostor se všemi potřebnými funkcemi. Po úspěšné platbě se uživatel dostane do osobní oblasti. Na obrázku níže můžete vidět konečný výsledek. Je to osobní oblast integrovaná s GoogleDrive. V prvních verzích existovaly další karty s chatem a úložištěm médií, ale po testovacím měsíci klient požádal o použití služeb Google pro všechny soubory a chat.",
+    },
+];

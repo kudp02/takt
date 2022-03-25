@@ -1,0 +1,25 @@
+.footer {
+    margin-top: 100px;
+}
+
+.footerText {
+    font-size: 15vw;
+    text-align: center;
+    border-bottom: 1px solid #191919;
+    margin-bottom: 50px;
+}
+
+.footerRow {
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.brief{
+    text-align: right !important;
+}
+
+@media screen and (max-width: 766px) {
+    .footerRow {
+        grid-template-columns: 1fr 1fr;
+    }
+}
