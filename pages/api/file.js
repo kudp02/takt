@@ -12,21 +12,21 @@ export const config = {
 const handler = nc("onError");
 const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "-");
 
-let storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads");
-  },
-  filename: function (req, file, cb) {
-    cb(null, req.body.name + "-" + utc + path.extname(file.originalname));
-  },
-});
+// let storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "uploads");
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, req.body.name + "-" + utc + path.extname(file.originalname));
+//   },
+// });
 
-let upload = multer({
-  storage: storage,
-});
+// let upload = multer({
+//   storage: storage,
+// });
 
-let uploadFile = upload.single("file");
-handler.use(uploadFile);
+// let uploadFile = upload.single("file");
+// handler.use(uploadFile);
 
 handler.post((req, res) => {
   const test = Object.entries(req.body).map(
@@ -45,27 +45,27 @@ handler.post((req, res) => {
 
   let mailData = {};
 
-  if (req.file) {
+  // if (req.file) {
+  //   mailData = {
+  //     from: process.env.MAIL_FROM,
+  //     to: process.env.MAIL_TO,
+  //     subject: `Takt brief`,
+  //     html: `<div>${test.join("<br>")}</div>`,
+  //     attachments: [
+  //       {
+  //         filename: req.file.filename,
+  //         path: process.cwd() + "/uploads/" + req.file.filename,
+  //       },
+  //     ],
+  //   };
+  // } else {
     mailData = {
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
       subject: `Takt brief`,
       html: `<div>${test.join("<br>")}</div>`,
-      attachments: [
-        {
-          filename: req.file.filename,
-          path: process.cwd() + "/uploads/" + req.file.filename,
-        },
-      ],
     };
-  } else {
-    mailData = {
-      from: process.env.MAIL_FROM,
-      to: process.env.MAIL_TO,
-      subject: `Takt brief`,
-      html: `<div>${test.join("<br>")}</div>`,
-    };
-  }
+  // }
 
   transporter.sendMail(mailData);
 
