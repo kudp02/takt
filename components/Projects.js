@@ -19,6 +19,7 @@ export default function Projects({ alt }) {
                     width={2000}
                     height={1000}
                     objectFit={"cover"}
+                    alt={project.name}
                   ></Image>
                 </a>
               </Link>

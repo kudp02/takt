@@ -39,6 +39,7 @@ const Project = (projekt) => {
           width={2000}
           height={1000}
           objectFit="contain"
+          alt={projekt.id}
         />
       )}
 
@@ -67,7 +68,7 @@ const Project = (projekt) => {
       {gallery && (
         <div className={styles.galleryCont + " row"}>
           {projekt.gallery1.map((image) => (
-            <img src={image} alt="" />
+            <img key={Math.random()} src={image} alt="" />
           ))}
 
           {/* {projekt.gallery1.map(image => (

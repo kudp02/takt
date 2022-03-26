@@ -7,7 +7,7 @@ export default function NavBar() {
     <header className={styles.header}>
       <Link href={"/"}>
         <a>
-          <Image src="/logo.svg" width={120} height={100}></Image>
+          <Image src="/logo.svg" width={120} height={100} alt="logo"></Image>
         </a>
       </Link>
 

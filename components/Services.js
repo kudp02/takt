@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <div>
       {sluzby.map((sluzba) => (
-        <Link href={`/services/${sluzba.name}`}>
+        <Link key={sluzba.name} href={`/services/${sluzba.name}`}>
           <a className={styles.service}>
             <div>
               <h3 className={styles.name}>{sluzba.name}</h3>

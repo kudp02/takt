@@ -37,11 +37,11 @@ export default function Contacts() {
                 <h2 className={styles.heading}>My</h2>
                 <div className="row">
                     <div className="col2">
-                        <Image src={"https://takt.digital/wp-content/uploads/2022/01/4-tym.jpeg"} width={1000} height={700} objectFit="cover"></Image>
+                        <Image src={"https://takt.digital/wp-content/uploads/2022/01/4-tym.jpeg"} width={1000} height={700} objectFit="cover" alt="Peter"></Image>
                         <div className={styles.text}>Peter Kudryavtsev</div>
                     </div>
                     <div className="col2">
-                        <Image src={"https://takt.digital/wp-content/uploads/2022/01/tym-5.jpeg"} width={1000} height={700} objectFit="cover"></Image>
+                        <Image src={"https://takt.digital/wp-content/uploads/2022/01/tym-5.jpeg"} width={1000} height={700} objectFit="cover" alt="Azat"></Image>
                         <div className={styles.text}>Azat Tulegenov</div>
                     </div>
                 </div>
