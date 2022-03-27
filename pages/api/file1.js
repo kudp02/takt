@@ -9,11 +9,21 @@ export const config = {
   },
 };
 
+const handler = nc({
+    onError: (err, req, res, next) => {
+      console.error(err.stack);
+      res.status(500).end("Something broke!");
+    },
+    onNoMatch: (req, res) => {
+      res.status(404).end("Page is not found");
+    },
+  })
+
 const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "-");
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads");
+    cb(null, "public/uploads");
   },
   filename: function (req, file, cb) {
     cb(null, req.body.name + "-" + utc + path.extname(file.originalname));
@@ -27,21 +37,12 @@ let upload = multer({
 let uploadFile = upload.single("file");
 handler.use(uploadFile);
 
-const handler = nc({
-  onError: (err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).end("Something broke!");
-  },
-  onNoMatch: (req, res) => {
-    res.status(404).end("Page is not found");
-  },
-}).post(async (req, res) => {
+handler.post((req, res) => {
+  const test = Object.entries(req.body).map(
+    ([key, value]) => `${key}: ${value}`
+  );
 
-  // const test = Object.entries(req.body).map(
-  //   ([key, value]) => `${key}: ${value}`
-  // );
-
-  console.log(req.body)
+  console.log(test)
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -55,28 +56,27 @@ const handler = nc({
 
   let mailData = {};
 
-  // if (req.file) {
-  //   mailData = {
-  //     from: process.env.MAIL_FROM,
-  //     to: process.env.MAIL_TO,
-  //     subject: `Takt brief`,
-  //     html: `<div>${test.join("<br>")}</div>`,
-  //     attachments: [
-  //       {
-  //         filename: req.file.filename,
-  //         path: process.cwd() + "/uploads/" + req.file.filename,
-  //       },
-  //     ],
-  //   };
-  // } else {
+  if (req.file) {
     mailData = {
       from: process.env.MAIL_FROM,
       to: process.env.MAIL_TO,
       subject: `Takt brief`,
-      // html: `<div>${test.join("<br>")}</div>`,
-      html:"works"
+      html: `<div>${test.join("<br>")}</div>`,
+      attachments: [
+        {
+          filename: req.file.filename,
+          path: process.cwd() + "/public/uploads/" + req.file.filename,
+        },
+      ],
     };
-  // }
+  } else {
+    mailData = {
+      from: process.env.MAIL_FROM,
+      to: process.env.MAIL_TO,
+      subject: `Takt brief`,
+      html: `<div>${test.join("<br>")}</div>`,
+    };
+  }
 
   transporter.sendMail(mailData);
 

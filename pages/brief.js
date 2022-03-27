@@ -3,7 +3,7 @@ import styles from "../styles/brief.module.css";
 import { services } from "../utils/services";
 import { budget } from "../utils/budget";
 import { analytics } from "../utils/analytics";
-import React, { useCallback, useState } from "react";
+import React, {useState } from "react";
 import { useDropzone } from "react-dropzone";
 
 export default function Brief() {
@@ -15,7 +15,7 @@ export default function Brief() {
       body: file,
     };
 
-    const response = await fetch(`/api/file`, options);
+    const response = await fetch(`/api/file1`, options);
 
     if (response.status === 200) {
       setSent(true);
@@ -24,7 +24,7 @@ export default function Brief() {
     }
   };
 
-  const sendForm = async (event) => {
+  const sendForm = (event) => {
     event.preventDefault();
 
     const formData = new FormData();
@@ -43,14 +43,13 @@ export default function Brief() {
       }
     });
 
-    formData.append("file", acceptedFiles[0]);
+      if (acceptedFiles[0]) {
+        formData.append("file", acceptedFiles[0]);
+      }
 
-    await fileUpload(formData);
+
+    fileUpload(formData);
   };
-
-  //   const [checkedState, setCheckedState] = useState(
-  //       new Array(toppings.length).fill(false)
-  //   );
 
   const initialValues = {
     cil: false,
