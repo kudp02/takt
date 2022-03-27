@@ -25,7 +25,8 @@ let storage = multer.diskStorage({
   //   destination: function (req, file, cb) {
   //     cb(null, "public/uploads");
   //   },
-  destination: "./public/uploads",
+//   destination: "./public/uploads",
+  destination: require.main?.path + "/" + "public/uploads/",
   filename: function (req, file, cb) {
     cb(null, req.body.name + "-" + utc + path.extname(file.originalname));
   },
@@ -67,7 +68,8 @@ handler.post(async (req, res) => {
         {
           filename: req.file.filename,
         //   path: process.cwd() + "/public/uploads/" + req.file.filename,
-        path: "./public/uploads/" + req.file.filename,
+        // path: "./public/uploads/" + req.file.filename,
+        path: require.main?.path + "/" + "public/uploads/" + req.file.filename,
         },
       ],
     };
