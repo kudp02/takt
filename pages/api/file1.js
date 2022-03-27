@@ -37,7 +37,7 @@ let upload = multer({
 let uploadFile = upload.single("file");
 handler.use(uploadFile);
 
-handler.post((req, res) => {
+handler.post(async (req, res) => {
   const test = Object.entries(req.body).map(
     ([key, value]) => `${key}: ${value}`
   );
@@ -78,7 +78,18 @@ handler.post((req, res) => {
     };
   }
 
-  transporter.sendMail(mailData);
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+        } else {
+            console.log(info);
+            resolve(info);
+        }
+    });
+});
 
   res.status(200).send("Uploaded");
 });
