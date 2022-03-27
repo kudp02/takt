@@ -10,21 +10,22 @@ export const config = {
 };
 
 const handler = nc({
-    onError: (err, req, res, next) => {
-      console.error(err.stack);
-      res.status(500).end("Something broke!");
-    },
-    onNoMatch: (req, res) => {
-      res.status(404).end("Page is not found"); 
-    },
-  })
+  onError: (err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).end("Something broke!");
+  },
+  onNoMatch: (req, res) => {
+    res.status(404).end("Page is not found");
+  },
+});
 
 const utc = new Date().toJSON().slice(0, 10).replace(/-/g, "-");
 
 let storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/uploads");
-  },
+  //   destination: function (req, file, cb) {
+  //     cb(null, "public/uploads");
+  //   },
+  destination: "./public/uploads",
   filename: function (req, file, cb) {
     cb(null, req.body.name + "-" + utc + path.extname(file.originalname));
   },
@@ -42,7 +43,7 @@ handler.post(async (req, res) => {
     ([key, value]) => `${key}: ${value}`
   );
 
-  console.log(test)
+  console.log(test);
 
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -65,7 +66,8 @@ handler.post(async (req, res) => {
       attachments: [
         {
           filename: req.file.filename,
-          path: process.cwd() + "/public/uploads/" + req.file.filename,
+        //   path: process.cwd() + "/public/uploads/" + req.file.filename,
+        path: "./public/uploads/" + req.file.filename,
         },
       ],
     };
@@ -81,15 +83,15 @@ handler.post(async (req, res) => {
   await new Promise((resolve, reject) => {
     // send mail
     transporter.sendMail(mailData, (err, info) => {
-        if (err) {
-            console.error(err);
-            reject(err);
-        } else {
-            console.log(info);
-            resolve(info);
-        }
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
     });
-});
+  });
 
   res.status(200).send("Uploaded");
 });
